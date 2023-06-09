@@ -6,7 +6,7 @@ PyRunplify is a python module that has the main focus to save and store outputs 
 It comes with an notification system that sends an email to the user when the code is finished and with the results attached.
 
 
-## Instalação
+## installation
 
 install PyRunplify with pip
 
@@ -15,7 +15,7 @@ install PyRunplify with pip
 ```
 or just download the source code.
     
-## Uso/Exemplos
+## Use/Examples
 To use PyRunplify, create a new notebook and import the module :
 ```python
 import PyRunplify
@@ -43,7 +43,7 @@ init_worker is the core function, and can receive a plethora of arguments to con
 
 
 
-## Licença
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
