@@ -13,7 +13,6 @@ port = "587"
 
 def send_mail(host, port, email, passw, new_name, error_handler, attach_handler):
 		server = smtplib.SMTP(host, port)
-		server.ehlo()
 		server.starttls()        
 		server.login(email, passw)
 		if(error_handler == False):
@@ -60,7 +59,7 @@ def init_worker(path, new_name='executed_notebook', email=None, passw=None, flag
 		nb = nbformat.read(f, as_version=4)    
 		ep = ExecutePreprocessor(timeout=600, kernel_name='python3')
 		try:
-			out = ep.preprocess(nb, {'metadata': {'path': '/'}})
+			out = ep.preprocess(nb)
 		except CellExecutionError:
 			out = None
 			error_handler = True
